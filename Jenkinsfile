@@ -9,5 +9,13 @@ pipeline {
                 sh "sleep 10"
             }
         }
+
+        stage('Testing') {
+                    steps {
+                        sh "mvn clean verify"
+                    }
+                }
+
     }
+
 }
